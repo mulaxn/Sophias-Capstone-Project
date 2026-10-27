@@ -1,4 +1,5 @@
 # The Menstrual Cycle & Sport — Education Site
+Your site is live at https://mulaxn.github.io/Sophias-Capstone-Project/
 
 A static, no-build HTML/CSS/JS awareness site for HUBI 4800 (Group 19): educating
 female athletes (17–25) and coaches on how the menstrual cycle affects athletic
