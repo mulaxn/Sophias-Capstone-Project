@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surveys | The Menstrual Cycle & Sport</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <h1>Help Us Measure the Impact</h1>
+    <p>
+      These short surveys help us tell whether this resource actually closes the
+      knowledge gap. Fill out the <strong>Pre</strong> survey for your group before
+      going through the site, and the <strong>Post</strong> survey after.
+    </p>
+
+    <div class="note">
+      <strong>Setup note (remove once configured):</strong> these forms submit via
+      <a href="https://formspree.io" target="_blank">Formspree</a> (free, no backend
+      needed). Create a free Formspree form and replace <code>YOUR_FORM_ID</code> in
+      each <code>&lt;form action&gt;</code> below with your real endpoint ID.
+    </div>
+
+    <div class="tab-wrapper">
+      <div class="tabs">
+        <button class="tab-btn active" data-target="panel-athlete-pre">Athlete &ndash; Pre</button>
+        <button class="tab-btn" data-target="panel-athlete-post">Athlete &ndash; Post</button>
+        <button class="tab-btn" data-target="panel-coach-pre">Coach &ndash; Pre</button>
+        <button class="tab-btn" data-target="panel-coach-post">Coach &ndash; Post</button>
+      </div>
+
+      <!-- ATHLETE PRE -->
+      <div id="panel-athlete-pre" class="tab-panel active">
+        <h2>Athlete &mdash; Before</h2>
+        <form class="survey-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="survey_type" value="Athlete - Pre" />
+          <div class="field">
+            <label>Age</label>
+            <input type="text" name="age" required />
+          </div>
+          <div class="field">
+            <label>What symptoms do you feel during peak menstruation (e.g., nausea, cramps)?</label>
+            <textarea name="symptoms" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>Do you feel you perform better, worse, or the same before/during/after peak menstruation? Explain.</label>
+            <textarea name="performance_perception" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>Do you know about the phases of the menstrual cycle? If so, briefly explain what you know.</label>
+            <textarea name="phase_knowledge" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>On a scale of 1&ndash;10, how well do you understand how your cycle affects your performance?</label>
+            <div class="scale-placeholder" data-name="understanding_scale"></div>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+
+      <!-- ATHLETE POST -->
+      <div id="panel-athlete-post" class="tab-panel">
+        <h2>Athlete &mdash; After</h2>
+        <form class="survey-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="survey_type" value="Athlete - Post" />
+          <div class="field">
+            <label>Age</label>
+            <input type="text" name="age" required />
+          </div>
+          <div class="field">
+            <label>Did you change your training regime to help with symptoms? If so, how &mdash; and did it help?</label>
+            <textarea name="training_change" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>Did different training techniques help alleviate performance pressure while on your cycle?</label>
+            <textarea name="technique_effectiveness" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>On a scale of 1&ndash;10, how well do you now understand why you perform/train the way you do during your cycle?</label>
+            <div class="scale-placeholder" data-name="understanding_scale_post"></div>
+          </div>
+          <div class="field">
+            <label>On a scale of 1&ndash;10, how helpful was this resource overall?</label>
+            <div class="scale-placeholder" data-name="helpfulness_scale"></div>
+          </div>
+          <div class="field">
+            <label>Any additional comments?</label>
+            <textarea name="comments" rows="2"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+
+      <!-- COACH PRE -->
+      <div id="panel-coach-pre" class="tab-panel">
+        <h2>Coach &mdash; Before</h2>
+        <form class="survey-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="survey_type" value="Coach - Pre" />
+          <div class="field">
+            <label>How many years have you been coaching?</label>
+            <input type="text" name="years_coaching" required />
+          </div>
+          <div class="field">
+            <label>What do you currently know about the menstrual cycle and its phases?</label>
+            <textarea name="phase_knowledge" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>Have you noticed performance differences in your athletes that you couldn't explain?</label>
+            <textarea name="unexplained_performance" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>On a scale of 1&ndash;10, how confident are you in supporting athletes through their cycle?</label>
+            <div class="scale-placeholder" data-name="confidence_scale"></div>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+
+      <!-- COACH POST -->
+      <div id="panel-coach-post" class="tab-panel">
+        <h2>Coach &mdash; After</h2>
+        <form class="survey-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="survey_type" value="Coach - Post" />
+          <div class="field">
+            <label>How many years have you been coaching?</label>
+            <input type="text" name="years_coaching" required />
+          </div>
+          <div class="field">
+            <label>Have you observed any significant differences in athlete performance over this period? Describe.</label>
+            <textarea name="observed_differences" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label>Optional: record quick task results you observed (time to fatigue, sprint time, grip strength, etc.)</label>
+            <textarea name="quick_task_results" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label>On a scale of 1&ndash;10, how confident are you now in supporting athletes through their cycle?</label>
+            <div class="scale-placeholder" data-name="confidence_scale_post"></div>
+          </div>
+          <div class="field">
+            <label>On a scale of 1&ndash;10, how helpful was this resource overall?</label>
+            <div class="scale-placeholder" data-name="helpfulness_scale"></div>
+          </div>
+          <div class="field">
+            <label>Any additional comments?</label>
+            <textarea name="comments" rows="2"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      Survey questions adapted from the methodology of McNamara et al. (2022).
+      Responses are used only for evaluating this education resource.
+    </p>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="js/common.js"></script>
+  <script src="js/survey.js"></script>
+</body>
+</html>
